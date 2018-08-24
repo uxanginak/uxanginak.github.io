@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>UX design</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">UX Design</span>
+        <span>
+          <button @click="redirect('About')" class="btn btn-outline-success my-2 my-sm-0" type="submit">Összefoglalás</button>
+          <button @click="redirect('Stuff')" class="btn btn-outline-success my-2 my-sm-0" type="submit">Tananyag</button>
+        </span>
+      </nav>
+
+      <div class="container">
+        <div v-if="site == 'About'">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  Áttekintés - nem mondom, hogy ez nagyon izgi, de egyszer érdemes lehet átfutni
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Picit összefoglalom amit ott a 70 fokban meséltem. (Mert erről végtelen sokat tudok beszélni.)</p>
+                  <p class="card-text">
+                    Ez a UI/UX design ez körülbelül arról szól, hogy egy szoftvernek (programnak, webalkalmazásnak) készít az ember
+                    egy olyan felületet, ami minél egyszerűbb. Hogy egy nagymama is megértse, és tudja használni. Hogy az egyszeri
+                    user, aki odatéved a weboldalra, egyből megtalálja azt a funkciót, amit keres, és végig tudjon menni azon az
+                    úton, ami a céljához vezeti. Ne kelljen gondolkoni, hogy melyik gomb, hogy melyik inputba mit kell írni, hogy
+                    hol tart a folyamaton belül... stb. És hogy mindezt olyan színek, képek, ikonok között tegye, ami illik az
+                    oldalhoz, de nem vonja el a figyelmét. Bizalomgerjesztő legyen, érezze, hogy jó helyen van.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">
+                    <img class="card-my-img" src="htmlcss.jpeg" alt="Card image cap">
+                    Minden esetben (Facebook, Google, Ebank, tippmix.hu) ez az alkalmazás egy dokumentum. Egy interaktív dokumentum.
+                    Rajta szövegek, képek, ikonok, gombok, input mezők (szöveg, szám, dátum, checkbox), esetleg videók.
+                    A "váz" megépítésére ott a HTML, a stílusra a CSS. Ezeket még nem feltétlen nevezném programozásnak, de van aki
+                    már annak hívja.
+                    Ezek ismeretében egy fejlesztő már el tud készíteni egy szép doksit, kb mintha jól ismerné a Word-öt, illetve
+                    a PowerPointot. Annyi különbséggel, hogy ha te csinálsz például egy PowerPoint diát, akkor mindenki - aki meg
+                    akarja nézni a saját gépén - kell, hogy rendelkezzen PowerPointtal. Ha viszont HTML+CSS kombóval rakod össze, akkor
+                    bárki, bármilyen eszközről, amin van egy böngésző (Chrome, Firefox, IE, Opera...) meg tudja nyitni.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">
+                    <img class="card-my-img" src="javascript.png" alt="Card image cap">
+                    Ha már van egy szép doksid, az már elég egy olyan weboldalhoz, mint például ez, ami csak "közöl".
+                    Mindenféle információt, például elérhetőséget, telefonszámot, bemutatkozást.
+                    De a legtöbbször - és ebben is van a nagyobb pénz - a userek interakcióját is figyelni kell.
+                    Ehhez már kell egy kis Javascript kódot is írni. Ez a harmadik, és egyben utolsó nyelv a frontend fejlesztéshez
+                    és ez már programozás - de nem túl bonyolult. Olyasmire kell gondolni, hogy leírod (csak angolul), hogy ha megy
+                    egy kattintás a <span class="green">"submit-button"</span> <span class="blue">id</span>-vel rendelkező <span class="red">button</span>-ra,
+                    akkor a <span class="green">"title"</span> és a <span class="green">"content"</span> <span class="blue">id</span>-vel rendelkező
+                    <span class="red">input</span> fieldek tartalmát küldje el (kb mint egy sms-t) a 346.123.23.56 "telefonszámra" - csak ebben az esetben
+                    IP címnek hívják. Innen erre jön egy "válasz sms", és attól függően, hogy ez "ok" vagy például "error" te picit
+                    átrajzolod a dokumentumot. Ennyi.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">
+                    <img class="card-my-img" src="code.png" alt="Card image cap">
+                    Annyit érdemes még tudni, hogy az igazán komoly "programozás" a másik oldalon van. Ahova küldöd az "sms"-t
+                    (hívjuk inkább "http request"-nek). Ez a backend, a szerver oldal. Itt történik az <span class="tech">authentication, authorization,
+                    security, logging, monitoring, persistence (database-ek, key-value store-ok), időzített és triggerelt job-ok</span>.
+                    A teljesség igénye nélkül.
+                    Mindezeket optimalizálni kell, hogy például gyors legyen akkor is, ha egyszerre 100.000 "sms" - http
+                    request - érkezik. Ezzel szemben, csak hogy lásd a kontrasztot, a frontenden gyakorlatilag nem tudsz
+                    olyan rossz minőségű kódot írni, hogy egy darab user, aki az ott futó kódot használja lerohassza a gépet - a
+                    saját laptopját/telóját. Sokkal inkább az a feladat, hogy szépen, logikusan, megfelelő animációkkal/áttünésekkel
+                    rajzolgasd át a doksit amit néz, az interakciói és az távozó/érkező request-ek/response-ok függvényében.
+                    Hogy ha vár, mert tölt valami, tudja, mire vár, legyen egy kis odaillő animáció, hogy legyen meg az érzése, hogy
+                    történik valami, ne csak így "megálljon" az oldal, ne tudjon ugyanarra kattintani mégegyszer, hogy ne
+                    csinálja meg véletlenül ugyanazt, de mást meg opcionálisan akár tudjon csinálni, amíg az egyik funkció tölt...
+                    Hasonlók. És ehhez "programozni" kell, mert hát kell ismerni egy programnyelvet, de ez sokkan inkább szépérzék, design,
+                    pszichológia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div v-if="site == 'Stuff'">
+          <div class="alert alert-success" role="alert">
+            Ha bármelyik lépésnél megakadsz, van kérdés, szólj, nagyon szívesen segítek&nbsp;<i class="far fa-smile"></i>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h4>Környezet kialakítása</h4>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">1-2 óra</h5>
+              <p class="card-text">
+                Ubuntu telepítés (opcionális), Google Chrome (vagy bármilyen böngésző, de ez a legjobb - gondolom már van), és
+                bármilyen texteditor - de akkor már Atom, erről meséltem, mutattam, ugyanolyan felturbózott texteditor mint
+                például a Microsoft Word - de míg a Word-öt úgy turbózták fel, hogy felismerje a stílusbeli és helyesírási hibákat,
+                addig az Atom-ot úgy, hogy felismerje, és az olvashatóságot könnyítendő kiszínezze a kódot a szintaxisnak megfelelően.
+              </p>
+              <hr>
+              <p class="my-hint">
+                Hozz létre egy file-t, csak ne .txt legyen a kiterjesztése, hanem .html - legyen például index.html.
+                Nyisd meg atom-mal, írj bele valamit, mentsd el, és nyisd meg Chrome-mal.
+                Megjelenik az akármi, ha átírod "valami"-re az atom-ban, és elmented, majd újratöltöd az oldalt a Chrome-ban, átíródik a content.
+                Innentől kezdve már készen is állsz &nbsp;<i class="far fa-smile"></i>.
+              </p>
+              <button class="btn btn-secondary" @click="open('https://www.ubuntu.com/download')">
+                <i class="fas fa-laptop"></i>
+                Ubuntu
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="btn btn-success" @click="open('https://www.google.com/chrome/')">
+                <i class="fab fa-chrome"></i>
+                Chrome
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button class="btn btn-success" @click="open('https://atom.io/')">
+                <i class="fas fa-atom"></i>
+                Atom
+                <i class="fas fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h4>Dokumentum szerkesztése</h4>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">2-3 hét</h5>
+              <p class="card-text">
+                Ha ezek megvannak, elkezdheted tanulni a HTML-t és a CSS-t. Ez, mint már feljebb is írtam, szövegszerkesztés.
+                Mintha Word-öt és PowerPoint-ot tanulnál. Csinálsz egy doksit, beleírsz dolgokat amit találsz a tutorial-okban,
+                megnyitod egy böngészőben, és bamm, webfejlesztő lettél. (Ne az online editort használd. A létrehozott
+                index.html nevű file-ba írogasd amit a tutorialokban látsz, nyisd meg a böngészőben, és ha
+                módosítottál rajta csak töltsd újra.)
+              </p>
+              <hr>
+              <p class="my-hint">
+                Ezt amúgy úgy képzeld, hogy az első 2-3 hétben semmi "értelmeset" nem nagyon fogsz csinálni.
+                Ez így működik. Picit úgy képzeld, mint mikor a kisbaba gügyög - nem az a cél, hogy verset mondjon, pláne
+                nem hogy írjon, hanem annak örül, hogy beszél. Örülj, hogy megjelennek dolgok a böngészőben, amiket kimásoltál, hogy kb működik
+                amit csinálsz. Ez nem lesz nehéz, de kell pici rutin, és jó érzés lesz 1-2 hét után, hogy "nahát, ezeket tudom".
+                Addig nyugodtan csináld ezeket újra és újra, mintha szavakat tanulnál egy nyelvórára.
+                Ez menjen rutinszerűen, mielőtt továbbmész.
+              </p>
+              <div class="buttons">
+                <span>
+                  <button class="btn btn-danger" @click="open('https://www.w3schools.com/html/default.asp')">
+                    <i class="fab fa-html5"></i>
+                    HTML
+                    <i class="fas fa-angle-right"></i>
+                  </button>
+                  <button class="btn btn-primary" @click="open('https://www.w3schools.com/css/default.asp')">
+                    <i class="fab fa-css3-alt"></i>
+                    CSS
+                    <i class="fas fa-angle-right"></i>
+                  </button>
+                </span>
+                <span>
+                  <button class="btn btn-danger" @click="open('https://www.youtube.com/watch?v=Y1BlT4_c_SU&list=PL4cUxeGkcC9ibZ2TSBaGGNrgh4ZgYE6Cc')">
+                    <i class="fab fa-html5"></i>
+                    HTML video tutorial
+                    <i class="fas fa-angle-right"></i>
+                  </button>
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h4>Interakciók kezelése</h4>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">2-3 hét</h5>
+              <p class="card-text">
+                Legkésőbb mikor ezt elkezded szólj. Ez már programozás, itt már van mit "érteni" - nem csak megtanulni.
+                Ha már magabiztosan tudsz doksikat készíteni, ezt akkor kezdd el. Ezzel reagálsz az interakciókra.
+                Ez már nagy anyag, de kb 2-3 hét után már ezt is tudod úgy használni, hogy kb elképzelésed
+                lesz róla, mi mindenre jó, illetve ekkor már fogod látni, hogy mi szükség van olyan librarykre, mint
+                például a JQuery és a Bootstrap.
+              </p>
+              <hr>
+              <p class="my-hint">
+                Ezt akkor kezdd el, ha már magabiztosan tudsz csinálni - minden segítség nélkül - egy olyan gombot,
+                aminek piros a háttere, ha fölötte van az egér, akkor kék, zöld a kerete, és kattintáskor meg sárga...
+                Vagy hasonló. Tudsz olyat - puskázás nélkül - hogy egy szövegrészlet jobbról ússzon be 3 másodperc alatt.
+                Be tudsz szúrni egy képet, ami 10 másodperc múlva elhalványul... nem is tudom.
+                Ezekben nincs semmi nehéz, erre mind megvan a szintaxis, csak meg kell ismerni és tanulni.
+              </p>
+              <button class="btn btn-warning" @click="open('https://www.w3schools.com/js/default.asp')">
+                <i class="fab fa-js-square"></i>
+                Javascript
+                <i class="fas fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h4>Portfólió építése</h4>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">2-3 hét</h5>
+              <p class="card-text">
+                JQuery, Bootstrap, ezek még tovább egyszerűsítik a frontend fejlesztést. Ezek előre megírt kódrészletek, amiket
+                sokan, sűrűn használnak. Nagyon konyhanyelven. Ha ezzel is eljátszottál 2-3 hetet, akkor össze tudsz rakni
+                néhány olyan demo oldalt, ami referenciának már bőven elég. Néhány apróság felszínes ismerete (github, terminal),
+                a magasművészeti <i class="far fa-smile"></i> diplomád, meg ez a tudás és róla a referenciák - meg is vagy, minimum nettó 300k kezdő fizu.
+              </p>
+              <hr>
+              <p class="my-hint">
+                Ezekhez még tényleg ne nyúlj hozzá. Túl "színes", és elviszi a fókuszt az alapoktól.
+                Nekem ilyen volt a gitározásnál, hogy 3 akkordot tudtam, de már elkezdtem gyakorolni nagy slágereket.
+                Kis szenvedés után megy, de magadtól semmit nem tudsz alkotni, mert az alapok nincsenek meg, és elmegy a kedved az egésztől.
+                Szánd rá azt a másfél hónapot előbb az előző 2 témára, és ha véletlenül idáig csinálod, és még élvezed, itt segítek
+                összerakni azt a portfóliót, ami profi, amit, ahol és ahogy szeretnék látni a fejlesztők.
+              </p>
+              <button disabled class="btn btn-primary">
+                <i class="fas fa-ban"></i>
+                Bootstrap
+              </button>
+              <button disabled class="btn btn-primary">
+                <i class="fas fa-ban"></i>
+                JQuery
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h4>Később...</h4>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">6-8-10 hónap - ez már nagyon messzire vezet</h5>
+              <p class="card-text">
+                Ebben a poziban megéri eltölteni egy fél, vagy akár egy évet, és közben rutint, tapasztalatot szerezni.
+                Azért ebben a pillanatban még nem leszel egy képzett, rutinos frontend developer, aki készen áll a freelancer
+                életre... Innen még nagyon sok rutint, tapasztalatot kell megszerezni, sok toolt, frameworköt, libraryt kell
+                megismerni. A teljesség igénye nélkül: ReactJS, Angular, VueJS, Webpack, Babel, Webstorm, Git, Jenkins, Karma/Jasmine...
+                De ezt már megteheted úgy, hogy közben pénzt keresel, jó pénzt.
+                Ráadásul ez egy jó "védőháló", mind azért, mert ha bármikor, bármi közbejönne,
+                még mindig ott van ez a referencia, ezek az ajánlások, "vissza lehet vonulni" egy uncsi, de biztonságos, irodista
+                közegbe egy picit, ha minden kötél szakad. Másik részről emellett kényelmesen ki lehet építeni azt
+                a freelancer networköt, amivel aztán meg lehet indulni a kisbusszal&nbsp;<i class="far fa-smile"></i>&nbsp;Ki lehet próbálni még tét nélkül, hogy szerzel munkát,
+                mennyi idő alatt milyen pénzeket tudsz összeszedni, és még nincs ott a tét, hogy ha nem végzel időben, akkor
+                nincs pénz benzinre&nbsp;<i class="far fa-smile"></i>&nbsp;Felhúzol egy profilt egy freelancer oldalon, eleinte olcsóbban elvállava néhány oldalt...
+                Aztán erről milliót tudnék mesélni&nbsp;<i class="far fa-smile"></i>&nbsp;
+                Illetve nem csak mesélni, mert van szükség egy olyan skillsetre, amit nem valószínű, hogy egy vállalaton belül
+                meg tudsz szerezni, ugyanis ott sokkal inkább specialistákra van szükség, mintsem olyan "generalistákra", akik
+                egyedül el tudnak készíteni valamit. 1-2 ilyen ember kell, aki átlátja a big picture-t,és sok specialistára.
+                Viszont a nagy pénz megintcsak abban van (freelancerként - egy vállalat a specialistákat is megfizeti), ha
+                minél komplexebb projekteket tudsz átlátni és elvállalni. Ehhez millió apróságot kell ismerni, amik nem bonyolultak,
+                de... na mindegy, erről majd ha itt tartunk véletlenül, mesélek szívesen, mert hogy, hogy nem az utóbbi 3 évben
+                pont ilyen irányba képeztem magam&nbsp;<i class="far fa-smile"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+.row {
+  margin-top: 20px;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+.card-my-img {
+  max-height: 80px;
+  float: right;
+  margin: 20px;
+}
+
+.card-text {
+  color: #555;
+  text-align: justify;
+}
+
+.my-hint {
+  opacity: 0.8;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blue {
+  color: blue;
+  font-weight: bold;
+}
+
+.green {
+  color: green;
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+.tech {
+  font-style: italic;
+}
